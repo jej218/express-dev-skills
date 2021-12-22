@@ -1,0 +1,33 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.no-bullets {
+  list-style-type: none;
+  padding: 15px 0px 15px 40px
+}
+
+.no-bullets > li {
+  padding: 5px 0px;
+  font-size: 20px;
+}
+
+li > label {
+  font-size: 17px;
+}
+
+.delete-form {
+  color: red;
+  margin: 5px 0px;
+  padding: 7px;
+  font-size: 17px;
+}
+
+button {
+  font-size: 15px;
+}

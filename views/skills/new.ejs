@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <title>New Skill</title>
+    </head>
+    <body>
+        <h1>New Skill</h1>
+        <form action="/skills" method="POST" autocomplete="off">
+            <ul class='no-bullets'>
+                <li>
+                    <label for='name'>Skill name</label>
+                    <input type="text" name="name" required>
+                </li>
+                <li>
+                    <label for='confidence'>Familiarity (1 to 10)</label>
+                    <input type='number' name='confidence' min=0 max=10 step=1 required>
+                </li>
+                <li>
+                    <label for='age'>Age (specify unit)</label>
+                    <input type='text' name='age' required>
+                </li>
+                <li>
+                    <button type="submit">Save Skill</button>
+                </li>
+            </ul>
+        </form>
+    </body>
+        
+</html>

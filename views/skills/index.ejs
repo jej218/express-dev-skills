@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Skills List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Skills List as of <%= date %></h1>
+    <ul>
+        <% skills.forEach(function(skill) { %>
+            <li>
+                <a href='/skills/<%= skill.name %>'><%= skill.name %></a>
+            </li>
+        <% }); %>
+    </ul>
+    <ul class='no-bullets'>
+        <li>
+            <a href='/'>Home Page</a>
+        </li>
+        <li>
+            <a href='/skills/new'>New Skill</a>
+        </li>
+    </ul>
+  </body>
+</html>

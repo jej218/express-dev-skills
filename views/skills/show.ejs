@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <title>Express Skills</title>
+    </head>
+    <body>
+        <h1>Skill: <%= skill.name %></h1>
+        <ul class='no-bullets'>
+            <li>
+                Learned <%= skill.age %> ago
+            </li>
+            <li>
+                Familiarity: <%= skill.confidence %> / 10
+            </li>
+        </ul>
+        <ul class='no-bullets'>
+            <li>
+                <form action='/skills/<%= skill.name %>?_method=PUT' method='POST' autocomplete='off' id='edit-skill'></form>
+                <label for='name'>Skill name</label>
+                <input type='text' name='name' value='<%= skill.name %>' form='edit-skill' required>
+            </li>
+            <li>
+                <label for='confidence'>Familiarity (1 to 10)</label>
+                <input type='number' name='confidence' min=0 max=10 value='<%= skill.confidence %>' form='edit-skill' required>
+            </li>
+            <li>
+                <label for='age'>Age (specify unit)</label>
+                <input type='text' name='age' min=0 max=10 value='<%= skill.age %>' form='edit-skill' required>
+            </li>
+            <li>
+                <button form='edit-skill' type='submit'>Edit Skill</button>
+            </li>
+            <li>
+                <a href='/skills'>Back to Skills List</a>
+            </li>
+            <li>
+                <form action='/skills/<%= skill.name %>?_method=DELETE'
+                method='POST' id='delete-skill'>
+                </form>
+                <button type='submit' form='delete-skill' class='delete-form'>Delete Skill</button>
+            </li>
+        </ul>
+        
+    </body>
+        
+</html>
